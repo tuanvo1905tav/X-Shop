@@ -1,0 +1,87 @@
+<!-- ==================Thanh Dia Chi================== -->
+<div class="container-fluid thanhDiaChi">
+    <div class="row">
+        <div class="col-lg-6 thanhDiaChiLeft">
+            <a href="#" title="SDT Tuấn"><i class="fas fa-mobile-alt"></i>&nbsp;039-452-2293</a>&nbsp;&nbsp;
+            <a href="#" title="Địa chỉ nhà"><i class="fas fa-map-marker-alt"></i>&nbsp;Song An-An Khê-Gia
+                Lai</a>&nbsp;&nbsp;
+            <a href="#" title="Email Tuấn"><i class="fas fa-envelope"></i>&nbsp;tuanvo1905tav@gmail.com</a>
+        </div>
+        <div class="col-lg-6 thanhDiaChiRight">
+            <a href="#"><i class="fab fa-facebook-square" title="Facebook"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fab fa-instagram-square" title="Instagram"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fab fa-youtube" title="Youtube"></i></a>
+        </div>
+    </div>
+</div>
+<!-- ==================End Thanh Dia Chi============== -->
+<!-- ==================Thanh Menu===================== -->
+<div class="container thanhMenu">
+    <div class="row">
+        <div class="col-lg-1 logo">
+            <div class="x">
+                <span id="x">X</span>
+            </div>
+            <div class="dau">
+                <span>&nbsp;-&nbsp;</span>
+            </div>
+            <div class="shop">
+                <span id="shop">SHOP</span>
+            </div>
+        </div>
+        <!-- ------TBDDong------ -->
+        <div class="col-lg-12 logoTBDD">
+            <img src="../../../assets/LogoTBDD.png" alt="">
+        </div>
+        <!-- ------TBDDong------ -->
+        <div class="col-lg-7 menu">
+            <div class="mn" routerLink="#">TRANG CHỦ</div>
+            <div class="mn" routerLink="#">ÁO</div>
+            <div class="mn" routerLink="#">QUẦN</div>
+            <div class="mn" routerLink="#">ĐỒ BỘ</div>
+            <div class="mn">
+                <ng-container *ngFor="let position of listOfPosition">
+                    <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="position" nzType="text">DANH
+                        MỤC</button>
+                    <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <ul nz-menu>
+                            <li nz-menu-item routerLink="#">Sản phẩm đại diện</li>
+                            <li nz-menu-item routerLink="#">Thương hiệu</li>
+                            <li nz-menu-item routerLink="#">Đói tác</li>
+                            <li nz-menu-item routerLink="#">Sản phẩm dự kiến ra mắt</li>
+                        </ul>
+                    </nz-dropdown-menu>
+                </ng-container>
+            </div>
+            <div class="mn" routerLink="#">VỀ CHÚNG TÔI</div>
+            <div class="mn" routerLink="#">LIÊN HỆ</div>
+        </div>
+        <!-- ------TBDDong------ -->
+        <div class="col-lg-12 menuTBDD">
+            <div class="mn" routerLink="#">TRANG CHỦ</div>
+            <div class="mn" routerLink="#">ÁO</div>
+            <div class="mn" routerLink="#">QUẦN</div>
+            <div class="mn" routerLink="#">ĐỒ BỘ</div>
+            <div class="mn">
+                <ng-container *ngFor="let position of listOfPosition">
+                    <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="position" nzType="text">DANH
+                        MỤC</button>
+                    <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <ul nz-menu>
+                            <li nz-menu-item routerLink="#">Sản phẩm đại diện</li>
+                            <li nz-menu-item routerLink="#">Thương hiệu</li>
+                            <li nz-menu-item routerLink="#">Đói tác</li>
+                            <li nz-menu-item routerLink="#">Sản phẩm dự kiến ra mắt</li>
+                        </ul>
+                    </nz-dropdown-menu>
+                </ng-container>
+            </div>
+            <div class="mn" routerLink="#">VỀ CHÚNG TÔI</div>
+            <div class="mn" routerLink="#">LIÊN HỆ</div>
+        </div>
+        <!-- ------TBDDong------ -->
+        <div class="col-lg-4 tacVu"></div>
+    </div>
+</div>
+
+<!-- ==================End Thanh Menu================= -->
