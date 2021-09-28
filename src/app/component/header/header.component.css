@@ -91,16 +91,33 @@
 .thanhMenu .menuTBDD{
     display: none;
 }
+.thanhMenu .ipadPro{
+    display: none;
+}
+.thanhMenu .ipadProTacVu{
+    display: none;
+}
+.thanhMenu .ipadProUser{
+    display: none;
+}
+.menuDienThoaiDiDong{
+    display: none;
+}
 @media only screen and (max-width: 1024px) {
     .thanhMenu .logo{
        display: none;
     }
-    .thanhMenu .menuTBDD{
+    .thanhMenu .ipadPro{
         display: inline;
-        margin-left: 20%;
     }
     .thanhMenu .logoTBDD{
         display: contents;
+    }
+    .thanhMenu .ipadProTacVu{
+        display: inline;
+    }
+    .thanhMenu .ipadProUser{
+        display: inline;
     }
     .thanhMenu .logoTBDD img{
         margin: auto;
@@ -108,17 +125,44 @@
     .thanhMenu .menu{
         display: none;
     }
-    .thanhMenu .menuTBDD .mn{
+    .thanhMenu .tacVu{
+        display: none;
+    }
+    .thanhMenu .menuTBDDipadPro .mn{
         float: left;
         line-height: 80px;
         margin-right: 15px;
         cursor: pointer;
     }
-
-}
-@media only screen and (max-width: 768px) {
-    .thanhMenu .menuTBDD{
-        margin-left: 6%;
+    .thanhMenu .menuTBDDipadPro{
+        padding-left: 20%;
     }
 }
+@media only screen and (max-width: 768px) {
+    .thanhMenu .menuTBDDipadPro{
+        padding-left: 10%;
+    }
+}
+/* --------Tac Vu---------- */
+.tacVu .timKiem{
+    width: 170px;
+    line-height: 80px;
+}
+.tacVu .user{
+    width: 120px;
+    line-height: 80px;
+    float: right;
+    margin-top: -80px;
+}
+/* ----------Responsive Dien Thoai-------- */
+@media only screen and (max-width: 576px) {
+    .menuDienThoaiDiDong{
+        display: inline;
+    }
+    .thanhMenu .ipadPro{
+        display: none;
+    }
+}
+/* ----------End Responsive Dien Thoai-------- */
+
 /* ==================End Thanh Menu================= */

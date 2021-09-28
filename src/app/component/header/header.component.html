@@ -18,7 +18,7 @@
 <!-- ==================Thanh Menu===================== -->
 <div class="container thanhMenu">
     <div class="row">
-        <div class="col-lg-1 logo">
+        <div class="col-lg-3 logo">
             <div class="x">
                 <span id="x">X</span>
             </div>
@@ -29,12 +29,12 @@
                 <span id="shop">SHOP</span>
             </div>
         </div>
-        <!-- ------TBDDong------ -->
+        <!-- ------TBDDongIpadPro------ -->
         <div class="col-lg-12 logoTBDD">
             <img src="../../../assets/LogoTBDD.png" alt="">
         </div>
-        <!-- ------TBDDong------ -->
-        <div class="col-lg-7 menu">
+        <!-- ------TBDDongIpadPro------ -->
+        <div class="col-lg-6 menu">
             <div class="mn" routerLink="#">TRANG CHỦ</div>
             <div class="mn" routerLink="#">ÁO</div>
             <div class="mn" routerLink="#">QUẦN</div>
@@ -56,32 +56,102 @@
             <div class="mn" routerLink="#">VỀ CHÚNG TÔI</div>
             <div class="mn" routerLink="#">LIÊN HỆ</div>
         </div>
-        <!-- ------TBDDong------ -->
-        <div class="col-lg-12 menuTBDD">
-            <div class="mn" routerLink="#">TRANG CHỦ</div>
-            <div class="mn" routerLink="#">ÁO</div>
-            <div class="mn" routerLink="#">QUẦN</div>
-            <div class="mn" routerLink="#">ĐỒ BỘ</div>
-            <div class="mn">
-                <ng-container *ngFor="let position of listOfPosition">
-                    <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="position" nzType="text">DANH
-                        MỤC</button>
-                    <nz-dropdown-menu #menu="nzDropdownMenu">
-                        <ul nz-menu>
-                            <li nz-menu-item routerLink="#">Sản phẩm đại diện</li>
-                            <li nz-menu-item routerLink="#">Thương hiệu</li>
-                            <li nz-menu-item routerLink="#">Đói tác</li>
-                            <li nz-menu-item routerLink="#">Sản phẩm dự kiến ra mắt</li>
-                        </ul>
-                    </nz-dropdown-menu>
-                </ng-container>
+        <!-- -------Thanh tac vu----- -->
+        <div class="col-lg-3 tacVu">
+            <div class="timKiem">
+                <nz-input-group [nzSuffix]="suffixIconSearch">
+                    <input type="text" nz-input placeholder="Tìm kiếm ..." />
+                </nz-input-group>
+                <ng-template #suffixIconSearch>
+                    <i nz-icon nzType="search" style="cursor: pointer;"></i>
+                </ng-template>
             </div>
-            <div class="mn" routerLink="#">VỀ CHÚNG TÔI</div>
-            <div class="mn" routerLink="#">LIÊN HỆ</div>
+            <div class="user">
+                <a href="#"><i class="fas fa-user" style="font-size: 22px; color: #2680EB;"></i>&nbsp;&nbsp;<span>ĐĂNG NHẬP</span></a>
+            </div>
         </div>
-        <!-- ------TBDDong------ -->
-        <div class="col-lg-4 tacVu"></div>
     </div>
+    <!-- -------End Thanh tac vu----- -->
+    <!-- ------TBDDongIpadPro------ -->
+    <div class="row ipadPro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 menuTBDDipadPro">
+                    <div class="mn" routerLink="#">TRANG CHỦ</div>
+                    <div class="mn" routerLink="#">ÁO</div>
+                    <div class="mn" routerLink="#">QUẦN</div>
+                    <div class="mn" routerLink="#">ĐỒ BỘ</div>
+                    <div class="mn">
+                        <ng-container *ngFor="let position of listOfPosition">
+                            <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="position"
+                                nzType="text">DANH
+                                MỤC</button>
+                            <nz-dropdown-menu #menu="nzDropdownMenu">
+                                <ul nz-menu>
+                                    <li nz-menu-item routerLink="#">Sản phẩm đại diện</li>
+                                    <li nz-menu-item routerLink="#">Thương hiệu</li>
+                                    <li nz-menu-item routerLink="#">Đói tác</li>
+                                    <li nz-menu-item routerLink="#">Sản phẩm dự kiến ra mắt</li>
+                                </ul>
+                            </nz-dropdown-menu>
+                        </ng-container>
+                    </div>
+                    <div class="mn" routerLink="#">VỀ CHÚNG TÔI</div>
+                    <div class="mn" routerLink="#">LIÊN HỆ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------Dien Thoai-------- -->
+    <div class="row menuDienThoaiDiDong">
+        <div class="container">
+            <div class="row text-center">
+                <ng-container *ngFor="let position of listOfPosition">
+                    <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="position"
+                        nzType="text">MENU</button>
+                    <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <ul nz-menu>
+                            <li nz-menu-item routerLink="#" class="test1">TRANG CHỦ</li>
+                            <li nz-menu-item routerLink="#" class="test1">ÁO</li>
+                            <li nz-menu-item routerLink="#" class="test1">QUẦN</li>
+                            <li nz-menu-item routerLink="#" class="test1">ĐỒ BỘ</li>
+                            <ng-container *ngFor="let position of listOfPosition" class="test1">
+                                <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="position"
+                                    nzType="text">DANH
+                                    MỤC</button>
+                                <nz-dropdown-menu #menu="nzDropdownMenu">
+                                    <ul nz-menu>
+                                        <li nz-menu-item routerLink="#" class="test1">Sản phẩm đại diện</li>
+                                        <li nz-menu-item routerLink="#" class="test1">Thương hiệu</li>
+                                        <li nz-menu-item routerLink="#" class="test1">Đói tác</li>
+                                        <li nz-menu-item routerLink="#" class="test1">Sản phẩm dự kiến ra mắt</li>
+                                    </ul>
+                                </nz-dropdown-menu>
+                            </ng-container>
+                            <li nz-menu-item routerLink="#">VỀ CHÚNG TÔI</li>
+                            <li nz-menu-item routerLink="#">LIÊN HỆ</li>
+                        </ul>
+                    </nz-dropdown-menu>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <!-- ---------Dien Thoai-------- -->
+    <div class="row ipadProTacVu">
+        <div class="col-lg-12" style="width: 80%; margin: auto;">
+            <nz-input-group [nzSuffix]="suffixIconSearch">
+                <input type="text" nz-input placeholder="Tìm kiếm ..." />
+            </nz-input-group>
+            <ng-template #suffixIconSearch>
+                <i nz-icon nzType="search" style="cursor: pointer;"></i>
+            </ng-template>
+        </div>
+    </div>
+    <div class="row ipadProUser">
+        <div class="col-lg-12 text-center mt-3 mb-3">
+            <a href="#"><i class="fas fa-user" style="font-size: 22px; color: #2680EB;"></i>&nbsp;&nbsp;<span>ĐĂNG NHẬP</span></a>
+        </div>
+    </div>
+    <!-- ------TBDDongIpadPro------ -->
 </div>
-
 <!-- ==================End Thanh Menu================= -->
