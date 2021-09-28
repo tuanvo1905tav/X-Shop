@@ -162,6 +162,10 @@
     .thanhMenu .ipadPro{
         display: none;
     }
+    .thanhMenu .logoTBDD img{
+        width: 375px;
+        height: 180px;
+    }
 }
 /* ----------End Responsive Dien Thoai-------- */
 
